@@ -1,0 +1,65 @@
+@import "variables.less";
+.reasons {
+    width: 100%;
+    padding: 8px 8px 0;
+    border-radius: 20px;
+    border: 2px solid @dark-10;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+
+        &__title {
+            grid-column: 1/5;
+            border-radius: 14px;
+            background-color: @dark-10;
+            padding: 30px ~"min(40px, max(8px, 4vw))" 36px;
+            color: @orange-95;
+            font-size: @fs-38;
+            font-weight: @fw-semibold;
+            text-transform: uppercase;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 28px 30px;
+            background-color: @dark-10;
+            border-radius: @br-12;
+
+            &-title {
+                color: @orange-95;
+                font-size: @fs-22;
+                margin-bottom: 10px;
+                font-weight: @fw-medium;
+                text-transform: uppercase;
+            }
+            &-description {
+                color: @gray-70;
+                font-size: @fs-16;
+            }
+            &-link {
+                color: @gray-70;
+                font-size: @fs-16;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+}
+
+@media (max-width: 768px) {
+    .reasons {
+        padding: 8px 8px 0;
+        border-radius: @br-16;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+          &__title {
+            grid-column: 1;
+            
+        }
+    }
+}

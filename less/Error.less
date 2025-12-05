@@ -1,0 +1,64 @@
+@import "variables.less";
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    border: none;
+
+}
+
+.page {
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+html {
+    background-color: @dark-06;
+}
+.screen{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 20px;
+}
+
+.header {
+    border-radius: 14px;
+    background-color: @dark-10;
+    padding: 24px 20px 22px 40px;
+    position: relative;
+
+    &__logo {
+        font-size: @fs-28;
+        font-weight: bold;
+        color: @gray-40;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: @orange-60;
+        }
+    }
+
+
+}
+.error {
+    text-align: center;
+
+    &__title {
+        color: @orange-60;
+        font-size: @fs-54;
+    }
+
+    &__description {
+        color: @gray-70;
+        font-size: @fs-42;
+    }
+
+}
+

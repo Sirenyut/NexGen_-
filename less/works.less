@@ -1,0 +1,242 @@
+@import "variables.less";
+
+
+
+.works{
+  &__projects{
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+
+  &__header {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: @br-14;
+    background-color: @dark-10;
+    padding: 40px ~"min(40px, max(16px, 4vw))";
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: @orange-95;
+    font-size: @fs-38;
+    text-transform: uppercase;
+     font-weight: @fw-semibold;
+  }
+  &__header-link {
+    color: @gray-70;
+    font-size: @fs-16;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  
+  &__item-title {
+    color: @orange-95;
+    font-size: @fs-18;
+    text-transform: uppercase;
+    font-weight: @fw-medium;
+  }
+  
+
+  &__project-item {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid @dark-10;
+    display: flex;
+    gap: 10px;
+    border-radius: @br-20;
+    border: 2px solid @dark-12;
+  }
+
+  &__project {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    background-color: @dark-10;
+    border-radius: @br-14;
+    padding: 49px ~"min(28px, max(10px, 4vw))";
+  }
+
+  &__project-header {
+    display: flex;
+    row-gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+
+
+  &__project-img {
+    width: 33%;
+    object-fit: cover;
+  }
+ 
+  &__header-item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__header-link{
+    font-size: @fs-16;
+    color: @gray-70;
+    text-transform: uppercase;
+   
+  }
+  &__list-item{
+    display: flex;
+    background-color: @dark-12;
+    border-radius: 45px;
+    padding: 10px 14px;
+    width: max-content;
+    margin-bottom: 5px;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__about-title{
+    color: @gray-70;
+    font-size: @fs-14;
+  }
+  &__dote{
+    color: @orange-60;
+  }
+  &__about{
+    color: @gray-90;
+    font-size: @fs-14;
+    font-weight: @fw-medium;
+  }
+
+   &__description{
+    color: @gray-70;
+    font-size: @fs-16;
+  }
+
+
+
+  &__development {
+    width: 33%;
+   
+  }
+
+  &__development-title {
+    font-size: @fs-16;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: @fw-medium;
+  }
+  &__technologies {
+    background-color: @dark-10;
+    width: 100%;
+    padding: 28px 30px;
+    border-radius: @br-10;
+    margin-bottom: 10px;
+  }
+
+  &__technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 26px;
+    margin-top: 16px;
+  }
+
+  &__technologie {
+    list-style: none;
+    background-color: @dark-12;
+    border-radius: 45px;
+    padding: 8px 14px;
+    color: @gray-90;
+    font-size: @fs-14;
+    width: max-content;
+  }
+ 
+  &__team {
+    background-color: @dark-10;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: @br-10;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  &__team-title {
+    font-size: @fs-16;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: @fw-medium;
+  }
+
+  
+  &__team-members-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__team-member {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__call {
+    border: none;
+    background-color: @orange-60;
+    color: @dark-06;
+    width: 100%;
+    height: 49px;
+    border-radius: 8px;
+    font-size: @fs-14;
+    font-weight: @fw-medium;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+            &:hover {
+                color:@orange-60;
+                background-color: @dark-12;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px @gray-40;
+            }
+  }
+  &__view-button{
+    display: none;
+    width: 100%;
+    background-color: @dark-10;
+    text-align: center;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: @gray-70;
+    border: none;
+  }
+
+}
+@media (max-width: 768px) {
+    .works{
+      &__project-item{
+        flex-direction: column;
+      }
+      &__project{
+        width: 100%;
+      }
+      &__list-item{
+        font-size: 12px;
+      }
+      &__development{
+        display: none;
+      }
+      &__project-img{
+        width: 100%;
+      }
+      &__view-button{
+        display: block;
+      }
+    }
+}

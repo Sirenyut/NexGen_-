@@ -1,0 +1,191 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 29% 29%;
+  gap: 10px;
+  grid-template-areas: "banner banner banner banner" "stroke stroke stroke stroke" "media media nav nav" "media media sub sub" "media media nex nex";
+}
+.footer__banner {
+  grid-area: banner;
+  width: 100%;
+  background-color: #CE7D63;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 60px min(60px, max(10px, 4vw));
+}
+.footer__banner-title {
+  font-size: min(42px, max(22px, 4vw));
+  color: #0F0F0F;
+  text-transform: uppercase;
+  width: 86%;
+}
+.footer__banner-description {
+  font-size: min(16px, max(12px, 2vw));
+  color: #262626;
+  width: 86%;
+}
+.footer__banner-button {
+  border: none;
+  background-color: #0F0F0F;
+  color: #E7BEB1;
+  padding: 15px 24px;
+  border-radius: 12px;
+}
+.footer__banner-button:hover {
+  color: #0F0F0F;
+  background-color: #CE7D63;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px #676665;
+}
+.footer__banner-button:focus {
+  outline: 2px solid #CE7D63;
+  outline-offset: 2px;
+}
+.footer__stroke {
+  grid-area: stroke;
+  width: 100%;
+}
+.footer__social-media {
+  grid-area: media;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.footer__social-media-item {
+  padding: 24px min(30px, max(10px, 4vw)) 10px;
+  background-color: #1A1A1A;
+  border-radius: 10px;
+}
+.footer__social-media-title {
+  font-size: min(22px, max(18px, 2vw));
+  color: #F9EFEC;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.footer__social-media-description {
+  font-size: min(16px, max(12px, 2vw));
+  color: #B3B3B2;
+  margin-bottom: 10px;
+}
+.footer__media-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.footer__nav {
+  grid-area: nav;
+  border-radius: 16px;
+  background-color: #1A1A1A;
+  padding: 34px min(78px, max(10px, 4vw)) 35px min(44px, max(10px, 4vw));
+  display: flex;
+  justify-content: space-between;
+}
+.footer__nav-list {
+  list-style: none;
+}
+.footer__nav-title {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #F3DFD8;
+  font-size: min(22px, max(18px, 2vw));
+}
+.footer__nav-link {
+  display: inline-block;
+  color: #81807E;
+  font-size: min(16px, max(12px, 2vw));
+  margin-top: 14px;
+  text-decoration: none;
+}
+.footer__subscribe {
+  grid-area: sub;
+  border-radius: 16px;
+  background-color: #1A1A1A;
+  padding: 40px min(40px, max(10px, 4vw));
+  display: flex;
+  gap: 16px;
+  align-items: end;
+}
+.footer__subscribe-description {
+  color: #676665;
+  font-size: min(16px, max(12px, 2vw));
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.footer__subscribe-title {
+  color: #F9EFEC;
+  font-size: min(24px, max(20px, 2vw));
+  text-transform: uppercase;
+}
+.footer__subscribe-input {
+  background-color: #1A1A1A;
+  height: 52px;
+  border: none;
+  border-bottom: 1px solid #333333;
+  padding: 14px;
+}
+.footer__subscribe-input::placeholder {
+  color: #676665;
+  font-size: 16px;
+  padding: 20px;
+}
+.footer__copyright {
+  grid-area: nex;
+  width: 100%;
+  padding: 40px min(40px, max(10px, 4vw));
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+.footer__copyright-title {
+  color: #B3B3B2;
+  font-size: min(14px, max(10px, 2vw));
+}
+.footer__copyright-rules {
+  display: flex;
+  gap: 16px;
+}
+.footer__copyright-rules-link {
+  color: #B3B3B2;
+  font-size: min(14px, max(10px, 2vw));
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .footer__nav {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 20px;
+    justify-items: center;
+  }
+  .footer__social-media {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__subscribe {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer__copyright {
+    flex-direction: column;
+  }
+}
+@media (max-width: 320px) {
+  .footer__banner {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+  }
+}
