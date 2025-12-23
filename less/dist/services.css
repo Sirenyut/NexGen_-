@@ -43,11 +43,23 @@
   text-transform: uppercase;
 }
 .services__item-link {
-  color: #B3B3B2;
-  font-size: min(16px, max(12px, 2vw));
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.services__item-link-text {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #B3B3B2;
+  font-size: min(16px, max(12px, 2vw));
+  text-decoration: none;
+}
+.services__item-link-text:hover {
+  color: #CE7D63;
+  transform: translateX(5px);
+}
+.services__item-link-img {
+  cursor: pointer;
 }
 .services__item-description {
   color: #B3B3B2;

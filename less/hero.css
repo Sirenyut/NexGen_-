@@ -6,6 +6,9 @@
 }
 .hero__start-screen {
   padding: 84px min(60px, max(24px, 4vw)) 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   background-color: #1A1A1A;
   border-radius: 16px;
@@ -16,6 +19,7 @@
   color: #F9EFEC;
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: -2.5px;
 }
 .hero__title:nth-child(3) {
   grid-column: 1/3;
@@ -44,7 +48,6 @@
 }
 .hero__description {
   font-size: min(16px, max(12px, 2vw));
-  margin-bottom: 76px;
   color: #676665;
   margin-top: 24px;
   max-width: 650px;

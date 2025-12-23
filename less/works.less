@@ -2,11 +2,11 @@
 
 
 
-.works{
-  &__projects{
+.works {
+  &__projects {
     display: flex;
-  flex-direction: column;
-  gap: 10px;
+    flex-direction: column;
+    gap: 5px;
   }
 
   &__header {
@@ -24,24 +24,19 @@
     color: @orange-95;
     font-size: @fs-38;
     text-transform: uppercase;
-     font-weight: @fw-semibold;
-  }
-  &__header-link {
-    color: @gray-70;
-    font-size: @fs-16;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-weight: @fw-semibold;
   }
 
-  
+
+
+
   &__item-title {
     color: @orange-95;
     font-size: @fs-18;
     text-transform: uppercase;
     font-weight: @fw-medium;
   }
-  
+
 
   &__project-item {
     padding: 10px;
@@ -57,10 +52,10 @@
     width: 33%;
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    justify-content: space-between;
     background-color: @dark-10;
     border-radius: @br-14;
-    padding: 49px ~"min(28px, max(10px, 4vw))";
+    padding: 48px ~"min(28px, max(10px, 4vw))" 50px;
   }
 
   &__project-header {
@@ -76,20 +71,33 @@
     width: 33%;
     object-fit: cover;
   }
- 
-  &__header-item{
+
+  &__header-item {
     display: flex;
     align-items: center;
     gap: 14px;
   }
 
-  &__header-link{
+  &__header-link {
     font-size: @fs-16;
     color: @gray-70;
     text-transform: uppercase;
-   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    &-text {
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: @orange-60;
+        transform: translateX(5px);
+      }
+    }
   }
-  &__list-item{
+
+  &__list-item {
     display: flex;
     background-color: @dark-12;
     border-radius: 45px;
@@ -100,20 +108,41 @@
     flex-wrap: wrap;
     align-items: center;
   }
-  &__about-title{
+
+  &__item-link {
+    color: @gray-50;
+    font-size: @fs-16;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    &-text {
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: @orange-60;
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__about-title {
     color: @gray-70;
     font-size: @fs-14;
   }
-  &__dote{
+
+  &__dote {
     color: @orange-60;
   }
-  &__about{
+
+  &__about {
     color: @gray-90;
     font-size: @fs-14;
     font-weight: @fw-medium;
   }
 
-   &__description{
+  &__description {
     color: @gray-70;
     font-size: @fs-16;
   }
@@ -122,7 +151,7 @@
 
   &__development {
     width: 33%;
-   
+
   }
 
   &__development-title {
@@ -131,6 +160,7 @@
     text-transform: uppercase;
     font-weight: @fw-medium;
   }
+
   &__technologies {
     background-color: @dark-10;
     width: 100%;
@@ -156,7 +186,7 @@
     font-size: @fs-14;
     width: max-content;
   }
- 
+
   &__team {
     background-color: @dark-10;
     width: 100%;
@@ -175,7 +205,7 @@
     font-weight: @fw-medium;
   }
 
-  
+
   &__team-members-list {
     display: flex;
     gap: 10px;
@@ -198,14 +228,16 @@
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-            &:hover {
-                color:@orange-60;
-                background-color: @dark-12;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 8px @gray-40;
-            }
+
+    &:hover {
+      color: @orange-60;
+      background-color: @dark-12;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px @gray-40;
+    }
   }
-  &__view-button{
+
+  &__view-button {
     display: none;
     width: 100%;
     background-color: @dark-10;
@@ -218,25 +250,31 @@
   }
 
 }
+
 @media (max-width: 768px) {
-    .works{
-      &__project-item{
-        flex-direction: column;
-      }
-      &__project{
-        width: 100%;
-      }
-      &__list-item{
-        font-size: 12px;
-      }
-      &__development{
-        display: none;
-      }
-      &__project-img{
-        width: 100%;
-      }
-      &__view-button{
-        display: block;
-      }
+  .works {
+    &__project-item {
+      flex-direction: column;
     }
+
+    &__project {
+      width: 100%;
+    }
+
+    &__list-item {
+      font-size: 12px;
+    }
+
+    &__development {
+      display: none;
+    }
+
+    &__project-img {
+      width: 100%;
+    }
+
+    &__view-button {
+      display: block;
+    }
+  }
 }

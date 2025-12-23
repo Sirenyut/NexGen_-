@@ -45,12 +45,20 @@
             text-transform: uppercase;
         }
 
-        &-link {
-            color: @gray-70;
+         &-link {
+            color: @gray-50;
             font-size: @fs-16;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
+            &-text {
+                transition: all 0.3s ease;
+                &:hover {
+                    color: @orange-60;
+                    transform: translateX(5px);
+                }
+            }           
         }
 
         &-description {
